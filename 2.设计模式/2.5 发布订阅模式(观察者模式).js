@@ -13,7 +13,7 @@ salesOffices.listen = function (fn) { // 增加订阅者
 };
 salesOffices.trigger = function () { // 发布消息
   for (var i = 0, fn; fn = this.clientList[i++];) {
-    f n.apply(this, arguments); // (2) // arguments 是发布消息时带上的参数
+    fn.apply(this, arguments); // (2) // arguments 是发布消息时带上的参数
   }
 };
 salesOffices.listen(function (price, squareMeter) { // 小明订阅消息
